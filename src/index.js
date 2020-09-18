@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {createStore} from "redux"
+import {createStore, applyMiddleware, compose} from "redux"
 import thunk from "redux-thunk"
 import {Provider} from "react-redux"
 
+const composeEnhancers=( window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose)
+
+let store=createStore(reducer,composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
-  <React.StrictMode>
+    <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    </Provider>,
+  document.getElementById('root') 
 );
 
 // If you want your app to work offline and load faster, you can change
