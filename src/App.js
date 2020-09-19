@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Category from "./containers/CategoryContainer"
 
+
 class App extends Component{
 
   // componentDidMount(){
@@ -15,6 +16,7 @@ class App extends Component{
   render(){
     return (
       <div className="App">
+        Hi
         <Category/>
       </div>
     );
