@@ -1,11 +1,11 @@
 import React, {Component} from "react"
 
-class Category extends Component {
+class CategoryContainer extends Component {
     render (){
         return (
-            <div>Category Contianer </div>
+            <div>Category Container </div>
         )
         }
 }
 
-export default Category;
+export default CategoryContainer;

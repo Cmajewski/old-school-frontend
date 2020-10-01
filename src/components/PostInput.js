@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class PostForm extends Component{
+class PostInput extends Component{
 
     render (){
         return (
@@ -11,3 +11,5 @@ class PostForm extends Component{
     }
 
 }
+
+export default PostInput

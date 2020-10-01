@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Category from "./containers/CategoryContainer"
+import CategoryContainer from "./containers/CategoryContainer"
+import PostContainer from "./containers/PostContainer"
 
 
 class App extends Component{
@@ -16,8 +16,8 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        Hi
-        <Category/>
+        <CategoryContainer/>
+        <PostContainer/>
       </div>
     );
 
