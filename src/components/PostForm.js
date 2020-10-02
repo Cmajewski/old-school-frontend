@@ -27,6 +27,16 @@ class PostForm extends Component{
     handleSubmit=(event)=>{
         event.preventDefault();
          this.props.createPost(this.state)
+         this.setState({
+            title:"",
+            image_url:"",
+            size:"",
+            description:"",
+            likes:0,
+            availability:"For Sale",
+            price: "",
+            category_id: ""
+         })
     }
 
     render (){
@@ -42,7 +52,7 @@ class PostForm extends Component{
                    <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={this.handleChange}/>
                     <br/>
                    <label>Size:</label>
-                   <input type="text" name="size" placeholder="Size" value={this.state.value} onChange={this.handleChange}/>
+                   <input type="text" name="size" placeholder="Size" value={this.state.size} onChange={this.handleChange}/>
                     <br/>
                    <label>Price:</label>
                    <input type="text" name="price" placeholder="Price" value={this.state.price} onChange={this.handleChange}/>
