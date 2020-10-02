@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import {connect} from "react-redux"
 import {fetchPosts} from "../actions/fetchPosts"
 
-import PostInput from "../components/PostInput"
+import PostForm from "../components/PostForm"
 import Posts from "../components/Posts"
 
 class PostContainer extends Component {
@@ -14,7 +14,7 @@ class PostContainer extends Component {
 render (){
     return (
         <div>
-        <PostInput/>
+        <PostForm/> <br/><br/>
         <Posts posts={this.props.posts}/>
         </div>
     )
