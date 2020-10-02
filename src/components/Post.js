@@ -11,7 +11,7 @@ const Post =({post})=>{
             <p>${post.price}</p>
             <p>{post.description}</p>
             <p>{post.likes} Likes</p>
-            {/* <p>{post.comments.length} Comments</p> */}
+            <p>{post.comments.length} Comments</p>
         </div>
     )
 }
