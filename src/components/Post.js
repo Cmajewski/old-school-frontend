@@ -1,6 +1,7 @@
 import React from "react"
 
 const Post =({post})=>{
+
     return (
         <div className="post-container">
             <h3>{post.title}</h3>
@@ -10,7 +11,7 @@ const Post =({post})=>{
             <p>${post.price}</p>
             <p>{post.description}</p>
             <p>{post.likes} Likes</p>
-            <p>{post.comments.length} Comments</p>
+            {/* <p>{post.comments.length} Comments</p> */}
         </div>
     )
 }

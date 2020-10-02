@@ -11,6 +11,8 @@ class PostForm extends Component{
             image_url:"",
             description:"",
             size:"",
+            likes:0,
+            availability:"For Sale",
             price: "",
             category_id: ""
         }
@@ -23,7 +25,7 @@ class PostForm extends Component{
     }
 
     handleSubmit=(event)=>{
-        event.preventDefault()
+        event.preventDefault();
          this.props.createPost(this.state)
     }
 

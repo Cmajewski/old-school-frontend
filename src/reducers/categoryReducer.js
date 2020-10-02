@@ -3,7 +3,7 @@ export default function categoryReducer (state={posts:[]}, action){
         case "FETCH_POSTS":
         return {posts: action.payload}
         case "ADD_POST":
-            return{...state, posts:[...state, action.payload]}
+            return {...state, posts:[...state.posts, action.payload]}
         default:
             return state
 
