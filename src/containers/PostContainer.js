@@ -3,7 +3,6 @@ import {connect} from "react-redux"
 import {fetchPosts} from "../actions/fetchPosts"
 import PostForm from "../components/PostForm"
 import Posts from "../components/Posts"
-import Post from "../components/Post"
 import {Route, Switch} from "react-router-dom"
 import NavBar from "../components/NavBar"
 

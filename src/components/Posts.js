@@ -1,11 +1,10 @@
 import React from "react"
 import Post from "./Post"
 
-const Posts=({posts})=>{
-    debugger;
+const Posts=(params)=>{
     return (
     <div>
-        {posts.map(post=><Post key={post.id} post={post}/>)}
+        {params.posts.map(post=><Post key={post.id} post={post}/>)}
     </div>
 )
 }

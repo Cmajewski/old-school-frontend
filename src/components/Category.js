@@ -1,15 +1,19 @@
 import React from "react"
-import Posts from "./Post"
+import {Link} from "react-router-dom"
 
-
-const Category=(props)=>{
-    debugger;
+const Category=({category})=>{
     
     return (
-       <div>
-           Category
-       </div>
-    )
+        <div>
+           <Link to={{
+            pathname: `/categories/${category.id}/posts`,
+            state: {posts: category.posts}
+           }}>
+           {category.name}
+           </Link>
+        </div>
+        
+        )
 }
 
 export default Category
