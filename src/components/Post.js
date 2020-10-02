@@ -2,6 +2,7 @@ import React from "react"
 
 const Post =({post})=>{
  
+    debugger;
     
     return (
         <div className="post-container">

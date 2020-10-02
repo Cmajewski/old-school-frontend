@@ -24,6 +24,15 @@ class PostForm extends Component{
      })
     }
 
+    // handleImage=(event)=>{
+    //     if (event.target.files && event.target.files[0]) {
+    //         this.setState({
+    //             image_url: URL.createObjectURL(event.target.files[0])
+    //         });
+    //         debugger;
+    //       }
+    //      }
+
     handleSubmit=(event)=>{
         event.preventDefault();
          this.props.createPost(this.state)
@@ -46,10 +55,12 @@ class PostForm extends Component{
                    <label>Name:</label>
                    <input type="text" name="title" placeholder="Title" value={this.state.title} onChange={this.handleChange}/>
                     <br/>
-                   <input type="file" name="image_url" value={this.state.image_url} onChange={this.handleChange}/>
-                    <br/>
+                   {/* <input type="file" value={this.state.image_url} onChange={this.handleImage}/>
+                    <br/> */}
+                    <label>Image URL:</label>
+                    <input type="text" name="image_url" placeholder="Image Link" value={this.state.image_url} onChange={this.handleChange}/>
                    <label> Description:</label>
-                   <input type="text" name="description" placeholder="Description" value={this.state.description} onChange={this.handleChange}/>
+                   <input type="text" name="description" placeholder="Description" onChange={this.handleChange}/>
                     <br/>
                    <label>Size:</label>
                    <input type="text" name="size" placeholder="Size" value={this.state.size} onChange={this.handleChange}/>
